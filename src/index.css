@@ -1,13 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  height: 80vh;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+button.BTN {
+  width: 5.535rem;
+  animation: board 2s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.clicked {
+  animation: example 1s cubic-bezier(0.82, 0.05, 0.17, 1.03);
+}
+
+@keyframes board {
+  from {
+    height: 0;
+    width: 0;
+  }
+  to {
+    height: 6rem;
+    width: 5.355rem;
+  }
+}
+
+@keyframes example {
+  from {
+    font-size: 0;
+    opacity: 0;
+  }
+  to {
+    font-size: 3.75rem;
+    opacity: 1;
+  }
 }
