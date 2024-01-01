@@ -12,7 +12,7 @@ body {
 }
 
 #root {
-  height: 80vh;
+  height: 100vh;
 }
 
 code {
@@ -51,3 +51,5 @@ button.BTN {
     opacity: 1;
   }
 }
+
+
