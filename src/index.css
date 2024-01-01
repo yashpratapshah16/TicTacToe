@@ -28,6 +28,7 @@ button.BTN {
 
 .clicked {
   animation: example 1s cubic-bezier(0.82, 0.05, 0.17, 1.03);
+  animation-fill-mode: forwards;
 }
 
 @keyframes board {
@@ -49,5 +50,44 @@ button.BTN {
   to {
     font-size: 3.75rem;
     opacity: 1;
+  }
+}
+
+@media (min-width: 426px) {
+  #board {
+    height: 36rem;
+    width: 36rem;
+  }
+  button.BTN {
+    width: 12rem;
+    animation: board 2s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  .clicked {
+    animation: example 1s cubic-bezier(0.82, 0.05, 0.17, 1.03);
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes board {
+    from {
+      height: 0;
+      width: 0;
+    }
+    to {
+      height: 12rem;
+      width: 12rem;
+    }
+  }
+
+  @keyframes example {
+    from {
+      font-size: 0;
+      opacity: 0;
+    }
+    to {
+      font-size: 8rem;
+      opacity: 1;
+    }
   }
 }
